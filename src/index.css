@@ -2,21 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
+:root {
+  --bg: #0a0b0f;
+  --fg: #e6e9ef;
+  --muted: #9aa4b2;
+  --accent: #6d8dff;
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
-  }
-  
-  .card-gradient {
-    @apply bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm;
-  }
+html, body, #root { height: 100%; }
+
+body { 
+  background: radial-gradient(1200px 600px at 20% -10%, #122 0%, #0a0b0f 40%), var(--bg); 
+  color: var(--fg);
 }
